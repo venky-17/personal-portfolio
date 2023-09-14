@@ -8,18 +8,17 @@ const handleTabClick = (event) => {
   const id = event.currentTarget.id;
   console.log(id);
 
-  // Hide all tab panels
+
   tabPanels.forEach(function (panel) {
     panel.hidden = true; 
   });
 
-  // Remove the .active class from all tab buttons
   tabBtns.forEach(function (button) {
     button.classList.remove('active');
     button.setAttribute('aria-selected', 'false');
   });
 
-  // Add the .active class and set aria-selected for the active tab button
+
   event.currentTarget.classList.add('active');
   event.currentTarget.setAttribute('aria-selected', "true");
 
@@ -47,14 +46,46 @@ themeBtn.addEventListener('click', () => {
    
     if (isDarkMode) {
       themeIcon.className = "fa fa-moon-o";
+      localStorage.setItem("theme","dark")
     } else {
       themeIcon.className = "fa fa-sun-o"; 
+      localStorage.setItem("theme","light")
     }
   
-    console.log("Dark mode toggled:", isDarkMode);
-    console.log("Icon class:", themeIcon.className);
+
+
+
   });
   
+   
+const setTheme = () => {
+  const body = document.body;
+
+  const isLightMode = body.classList.contains('!dark-mode'); 
+
+  let selectedTheme = localStorage.getItem("theme")
+  console.log(selectedTheme);
+
+
+if(selectedTheme==="light"){
+  body.classList.add("dark-mode")
+  themeIcon.className = "fa fa-sun-o"
   
+} else{
+  
+  body.classList.remove("dark-mode")
+  themeIcon.className = "fa fa-moon-o"
+  
+}
+
+
+   
+}
+
+
+
+window.addEventListener('load', setTheme)
+
+
 
 

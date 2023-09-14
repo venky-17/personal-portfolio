@@ -148,7 +148,7 @@ display: flex;
 .resume{
     text-decoration: none;
     color: #E6007E;
-
+   
 }
 .icons{
     margin: 0 20px;
@@ -286,8 +286,7 @@ flex-direction: column;
     margin: auto;
     border-radius: 2px solid white;
     display: flex;
-/* justify-content: center;
-align-items: center; */
+
 flex-direction: column;
 margin-top: 40px;
 }
@@ -596,3 +595,5 @@ img{
     text-decoration: none;
     color: violet;
 }
+
+
