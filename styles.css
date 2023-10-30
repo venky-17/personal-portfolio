@@ -22,6 +22,7 @@ body{
     background-color: black;
     height: 60px;
     width: 100%;
+    
   
     z-index: 2;
 
@@ -47,7 +48,7 @@ body{
 .profile-card {
     background-color: #16161D;
    width: 700px; 
-    margin: 40px auto; /* Adjust margins */
+    margin: 40px auto; 
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -403,6 +404,20 @@ color: black;
 .dark-mode .project-img{
     border: none;
 }
+ .white-mode .sm-icons .github{
+  color: white;
+
+}
+footer .socialmedia{
+    display: flex;
+    justify-content: center;
+}
+
+.sm-icons svg{
+   height: 50px;
+   width: 50px;
+   margin: 20px 20px;
+}
 
 @media (max-width: 767px) {
   
@@ -595,5 +610,9 @@ img{
     text-decoration: none;
     color: violet;
 }
-
+.sm-icons svg{
+    height: 35px;
+    width: 35px;
+    margin: 20px 20px;
+ }
 
