@@ -1,3 +1,3 @@
-Live : https://venky17.netlify.app/
+Live : https://venky17.xyz
 # Personal-Portfolio
 
